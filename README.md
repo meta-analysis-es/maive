@@ -7,10 +7,10 @@ This readme provides some instructions on the implementation of the MAIVE metaan
 1. Data
 The data should have the following structure:
 
- Column 1, to be labelled ‘bs’, should contain the primary estimates.
- Column 2, to be labelled ‘sebs’, should contain the standard errors.
- Column 3, to be labelled ‘Ns’, should contain the sample sizes.
- Column 4, to be labelled ‘study id’, should contain a study identifi cation number.
+- Column 1, to be labelled ‘bs’, should contain the primary estimates.
+- Column 2, to be labelled ‘sebs’, should contain the standard errors.
+- Column 3, to be labelled ‘Ns’, should contain the sample sizes.
+- Column 4, to be labelled ‘study id’, should contain a study identification number.
 (This column is only necessary if the user chooses clustering or study-level fixed effects. See below.)
 
 2. Options
