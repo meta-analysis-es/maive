@@ -46,12 +46,12 @@ Note that obtaining the AR confidence interval takes some time.
 
 4. Output
 The code returns:
-1. A MAIVE point estimate and a standard error.
-2. A Hausman-type test statistic and a 5% critical value. The test statistic consists of a weighted squared difference between the MAIVE point estimate and a standard
+- A MAIVE point estimate and a standard error.
+- A Hausman-type test statistic and a 5% critical value. The test statistic consists of a weighted squared difference between the MAIVE point estimate and a standard
 point estimate. The latter is obtained from the same method as chosen for MAIVE but with inverse-variance weights and without instrumenting the standard errors.
-3. When instrumenting the standard errors, the code also returns a heteroskedasticity-robust F test of the first-stage regression.
-4. When choosing the AR option, the code also returns a Anderson-Rubin confidence interval for weak instruments.
-5. The instrumented standard errors are saved as SE instrumented and can be obtained as “MAIVE$SE_instrumented”.
+- When instrumenting the standard errors, the code also returns a heteroskedasticity-robust F test of the first-stage regression.
+- When choosing the AR option, the code also returns a Anderson-Rubin confidence interval for weak instruments.
+- The instrumented standard errors are saved as SE instrumented and can be obtained as “MAIVE$SE_instrumented”.
 
 4. Technical comments
 - In the first-stage, we regress the variances on a constant and the inverse sample sizes.
