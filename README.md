@@ -9,6 +9,7 @@ This readme provides some instructions on the implementation of the MAIVE metaan
 Once you have installed R and RStudio Desktop, you can install MAIVE using devtools
 
   install.packages("devtools")
+
   devtools::install_github("HeikoJR/MAIVE")
 
 2. Data
