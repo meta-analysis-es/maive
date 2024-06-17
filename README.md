@@ -17,16 +17,17 @@ The data should have the following structure:
 The user needs to specify the options:
 
 OPTIONS: 
-method: PET:1, PEESE:2, PET-PEESE:3, EK:4 (default 3)
+- method: PET:1, PEESE:2, PET-PEESE:3, EK:4 (default 3)
   method <- 3
-weighting: default no weight: 0 ; weights: 1, adjusted weights: 2 (default 0)
+- weighting: default no weight: 0 ; weights: 1, adjusted weights: 2 (default 0)
   weight <- 0
-instrumenting (default 1)
+- instrumenting (default 1)
   instrument <- 1 
-correlation at study level: none: 0 (default), fixed effects: 1, cluster: 2
+- correlation at study level: none: 0 (default), fixed effects: 1, cluster: 2
   studylevel <-2
-Anderson-Rubin confidence interval for weak instruments (only for unweighted MAIVE -- PET, PEESE or PET-PEESE): 0 no, 1 yes
+- Anderson-Rubin confidence interval for weak instruments (only for unweighted MAIVE -- PET, PEESE or PET-PEESE): 0 no, 1 yes
   AR <-1
+
 default options are method=3; weight=0; instrument=1; studylevel=0; AR=0 
 
 The default MAIVE meta-estimator is MAIVE-PET-PEESE with instrumented standard errors and no weights. However, the user can choose other options.
