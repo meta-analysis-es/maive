@@ -5,6 +5,7 @@ This version: June 2024
 This readme provides some instructions on the implementation of the MAIVE metaanalysis estimator in R: The maivefunction.r package.
 
 1. Data
+
 The data should have the following structure:
 
 - Column 1, to be labelled ‘bs’, should contain the primary estimates.
@@ -14,9 +15,9 @@ The data should have the following structure:
 (This column is only necessary if the user chooses clustering or study-level fixed effects. See below.)
 
 2. Options
+   
 The user needs to specify the options:
 
-OPTIONS: 
 - method: PET:1, PEESE:2, PET-PEESE:3, EK:4 (default 3)
   method <- 3
 - weighting: default no weight: 0 ; weights: 1, adjusted weights: 2 (default 0)
@@ -44,7 +45,8 @@ This option is available for the unweighted MAIVE – PET, PEESE and PET-PEESE v
 Its use is recommendable if the first stage F-test statistic lies between 10 and 100 (see Keane and Neal, 2023, for further details). 
 Note that obtaining the AR confidence interval takes some time.
 
-4. Output
+3. Output
+   
 The code returns:
 - A MAIVE point estimate and a standard error.
 - A Hausman-type test statistic and a 5% critical value. The test statistic consists of a weighted squared difference between the MAIVE point estimate and a standard
