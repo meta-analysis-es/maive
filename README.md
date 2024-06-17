@@ -15,29 +15,30 @@ The data should have the following structure:
 
 2. Options
 The user needs to specify the options:
-# OPTIONS: 
-# method: PET:1, PEESE:2, PET-PEESE:3, EK:4 (default 3)
+
+OPTIONS: 
+method: PET:1, PEESE:2, PET-PEESE:3, EK:4 (default 3)
   method <- 3
-# weighting: default no weight: 0 ; weights: 1, adjusted weights: 2 (default 0)
+weighting: default no weight: 0 ; weights: 1, adjusted weights: 2 (default 0)
   weight <- 0
-# instrumenting (default 1)
+instrumenting (default 1)
   instrument <- 1 
-# correlation at study level: none: 0 (default), fixed effects: 1, cluster: 2
+correlation at study level: none: 0 (default), fixed effects: 1, cluster: 2
   studylevel <-2
-  # Anderson-Rubin confidence interval for weak instruments (only for unweighted MAIVE -- PET, PEESE or PET-PEESE): 0 no, 1 yes
+Anderson-Rubin confidence interval for weak instruments (only for unweighted MAIVE -- PET, PEESE or PET-PEESE): 0 no, 1 yes
   AR <-1
-# default options are method=3; weight=0; instrument=1; studylevel=0; AR=0 
+default options are method=3; weight=0; instrument=1; studylevel=0; AR=0 
 
 The default MAIVE meta-estimator is MAIVE-PET-PEESE with instrumented standard errors and no weights. However, the user can choose other options.
 
 The code allows for the user to change the meta-analysis method (PET, PEESE, PET-PEESE, or EK), the weighting (no weights, standard inverse-variance weights, or MAIVE-
 adjusted weights), the instrumentation of standard errors (yes or no), and the accounting for study-level correlation (none, study fixed effects, or cluster-robust methods).
- Method: PET=1, PEESE=2, PET-PEESE=3, EK=4. The default method option is PET-PEESE=3. 
- Weighting: no weights=0, inverse-variance weights=1, adjusted weights=2. The default weighting option is no weights=0. 
- Instrumenting the SEs: no=0, yes=1. The default instrumenting option is yes=1.
- Study-level correlation: none=0, study fixed effects=1, cluster-robust standard errors=2. 
+- Method: PET=1, PEESE=2, PET-PEESE=3, EK=4. The default method option is PET-PEESE=3. 
+- Weighting: no weights=0, inverse-variance weights=1, adjusted weights=2. The default weighting option is no weights=0. 
+- Instrumenting the SEs: no=0, yes=1. The default instrumenting option is yes=1.
+- Study-level correlation: none=0, study fixed effects=1, cluster-robust standard errors=2. 
 The default study-level correlation option is none=0. 
- Anderson-Rubin confidence interval (for weak instruments) for the meta-estimate: AR=0, no (default); AR=1, yes. 
+- Anderson-Rubin confidence interval (for weak instruments) for the meta-estimate: AR=0, no (default); AR=1, yes. 
 This option is available for the unweighted MAIVE – PET, PEESE and PET-PEESE versions. It is not available for study fixed effects.
 Its use is recommendable if the first stage F-test statistic lies between 10 and 100 (see Keane and Neal, 2023, for further details). 
 Note that obtaining the AR confidence interval takes some time.
@@ -52,11 +53,11 @@ point estimate. The latter is obtained from the same method as chosen for MAIVE 
 5. The instrumented standard errors are saved as SE instrumented and can be obtained as “MAIVE$SE_instrumented”.
 
 4. Technical comments
- In the first-stage, we regress the variances on a constant and the inverse sample sizes.
- The Hausman-type test is weighted by the variance of the MAIVE estimator and is, consequently, a conservative test. It only compares the intercepts.
- If study fixed effects are included, the dummy variables are demeaned so that the intercept measures a grand mean.
- If the user does not provide a ‘study-id’ column, the program assumes that the study-level correlation option is none.
- The Anderson-Rubin confidence interval is obtained in the standard way (see Keane and Neal, 2023, for further details).
+- In the first-stage, we regress the variances on a constant and the inverse sample sizes.
+- The Hausman-type test is weighted by the variance of the MAIVE estimator and is, consequently, a conservative test. It only compares the intercepts.
+- If study fixed effects are included, the dummy variables are demeaned so that the intercept measures a grand mean.
+- If the user does not provide a ‘study-id’ column, the program assumes that the study-level correlation option is none.
+- The Anderson-Rubin confidence interval is obtained in the standard way (see Keane and Neal, 2023, for further details).
 
 References
 Keane, Michael and Neal, Timothy. 2023. “Instrument strength in IV estimation and inference: A guide to theory and practice”, Journal of Econometrics, 235, 2, 1625-1653.
