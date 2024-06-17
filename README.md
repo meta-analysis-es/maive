@@ -4,7 +4,14 @@ This version: June 2024
 
 This readme provides some instructions on the implementation of the MAIVE metaanalysis estimator in R: The maivefunction.r package.
 
-1. Data
+0. Installation
+
+Once you have installed R and RStudio Desktop, you can install MAIVE using devtools
+
+install.packages("devtools")
+devtools::install_github("HeikoJR/MAIVE")
+
+2. Data
 
 The data should have the following structure:
 
