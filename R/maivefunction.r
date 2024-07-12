@@ -23,8 +23,7 @@
 #' @return MAIVE meta-estimate and standard error
 #' @return Hausman type test: comparison between MAIVE and standard version
 #' @return heteroskedastic robust F-test of the first step instrumented standard errors (when instrumenting)
-
-
+#' @export
 maive <- function(dat=dat,method=method,weight=weight,instrument=instrument,studylevel=studylevel,AR=AR) {
 
   if (!require('varhandle')) install.packages('varhandle'); library('varhandle')
