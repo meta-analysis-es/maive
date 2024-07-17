@@ -12,7 +12,7 @@ Once you have installed R and RStudio Desktop, you can install MAIVE using devto
 
   devtools::install_github("HeikoJR/MAIVE")
 
-2. Data
+1. Data
 
 The data should have the following structure:
 
