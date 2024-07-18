@@ -4,7 +4,7 @@ This version: June 2024
 
 This readme provides some instructions on the implementation of the MAIVE metaanalysis estimator in R: The meta_maive package with the maive.R function.
 
-Spurious Precision in Meta-Analysis of Observational Research by Zuzana Irsova, Pedro R. D. Bom, Tomas Havraneka, and Heiko Rachinger (https://meta-analysis.cz/maive/maive)
+Spurious Precision in Meta-Analysis of Observational Research by Zuzana Irsova, Pedro R. D. Bom, Tomas Havranek, and Heiko Rachinger (https://meta-analysis.cz/maive/maive)
 
 0. Installation
 
