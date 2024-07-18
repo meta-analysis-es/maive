@@ -21,7 +21,9 @@
 #' standard estimator: same option as for MAIVE but weighted by inverse variance and not instrumented     
 #'
 #' @return $beta = MAIVE meta-estimate 
-#' @return $SE standard error
+#' @return $SE MAIVE standard error
+#' @return $beta_standard = meta-estimate as chosen by option
+#' @return $SE_standard standard error as chosen by option
 #' @return $Hausman Hausman type test: comparison between MAIVE and standard version
 #' @return $F-Test heteroskedastic robust F-test of the first step instrumented standard errors (when instrumenting)
 #' @return $AR-CI Anderson-Rubin confidence interval for weak instruments
