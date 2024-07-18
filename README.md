@@ -63,6 +63,7 @@ Note that obtaining the AR confidence interval takes some time.
    
 The code returns:
 - A MAIVE point estimate and a standard error.
+- A point estimate and standard error from the method chosen in option
 - A Hausman-type test statistic and a 5% critical value. The test statistic consists of a weighted squared difference between the MAIVE point estimate and a standard
 point estimate. The latter is obtained from the same method as chosen for MAIVE but with inverse-variance weights and without instrumenting the standard errors.
 - When instrumenting the standard errors, the code also returns a heteroskedasticity-robust F test of the first-stage regression.
