@@ -1,17 +1,17 @@
 MAIVE in R: Instructions to the User
 
-This version: June 2024
+This version: July 2024
 
 This readme provides some instructions on the implementation of the MAIVE metaanalysis estimator in R: The meta_maive package with the maive.R function.
 
-Spurious Precision in Meta-Analysis of Observational Research by Zuzana Irsova, Pedro R. D. Bom, Tomas Havranek, and Heiko Rachinger (https://meta-analysis.cz/maive/maive)
+Spurious Precision in Meta-Analysis of Observational Research by Zuzana Irsova, Pedro R. D. Bom, Tomas Havranek, and Heiko Rachinger (https://meta-analysis.cz/maive)
 
 0. Installation
 
 Once you have installed R and RStudio Desktop, you can install MAIVE using devtools
 
   install.packages("devtools")
-  devtools::install_github("meta_maive")
+  devtools::install_github("meta-analysis-es/meta_maive")
   library(meta_maive)
 
 For the help on the maive.R function 
