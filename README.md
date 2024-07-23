@@ -11,7 +11,9 @@ Spurious Precision in Meta-Analysis of Observational Research by Zuzana Irsova, 
 Once you have installed R and RStudio Desktop, you can install MAIVE using devtools
 
   install.packages("devtools")
+  
   devtools::install_github("meta-analysis-es/meta_maive")
+  
   library(meta_maive)
 
 For the help on the maive.R function 
