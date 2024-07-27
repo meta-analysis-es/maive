@@ -22,11 +22,11 @@ maive(
 
 standard estimator: same option as for MAIVE but weighted by inverse variance and not instrumented}
 
-\item{weighting}{0 no weights, 1 standard weights, 2 adjusted weights}
+\item{weighting}{0=no weights, 1=standard weights, 2=adjusted weights}
 
-\item{instrumenting}{1 yes, 0 no}
+\item{instrumenting}{1=yes, 0=no}
 
-\item{correlation}{correlation at study level: 0 none, 1 fixed effects, 2 cluster}
+\item{correlation}{correlation at study level: 0=none, 1=fixed effects, 2=cluster}
 }
 \value{
 MAIVE meta-estimate and standard error
