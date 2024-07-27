@@ -29,12 +29,29 @@ standard estimator: same option as for MAIVE but weighted by inverse variance an
 \item{correlation}{correlation at study level: 0=none, 1=fixed effects, 2=cluster}
 }
 \value{
+$beta = MAIVE meta-estimate
+
+$SE MAIVE standard error
+
+$beta_standard = meta-estimate as chosen by option
+
+$SE_standard standard error as chosen by option
+
+$Hausman Hausman type test: comparison between MAIVE and standard version
+
+$F-Test heteroskedastic robust F-test of the first step instrumented standard errors (when instrumenting)
+
+$AR-CI Anderson-Rubin confidence interval for weak instruments
+
+$SE_instrumented instrumented standard errors
+
 MAIVE meta-estimate and standard error
 
 Hausman type test: comparison between MAIVE and standard version
 
 when instrumenting: heteroskedastic robust F-test of the first step
       instrumented standard errors
+
 }
 \description{
 R package for MAIVE: "Spurious Precision in Meta-Analysis of Observational Research" by Zuzana Irsova, Pedro Bom, Tomas Havranek, and Heiko Rachinger
