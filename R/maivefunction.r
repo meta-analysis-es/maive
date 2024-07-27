@@ -12,7 +12,7 @@
 #' default option for MAIVE: MAIVE-PET-PEESE, unweighted, instrumented
 #'
 #' @param dat dataframe with columns bs, sebs, Ns, study_id (optional) 
-#' @param method  1=FAT-PET, 2=PEESE, 3=PET-PEESE, 4=EK 
+#' @param method  1\=FAT-PET, 2=PEESE, 3=PET-PEESE, 4=EK 
 #' @param weighting  0=no weights, 1=standard weights, 2=adjusted weights  
 #' @param instrumenting 1=yes, 0=no 
 #' @param correlation correlation at study level: 0=none, 1=fixed effects, 2=cluster
