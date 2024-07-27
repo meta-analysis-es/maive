@@ -16,9 +16,9 @@ maive(
 \arguments{
 \item{dat}{data with columns bs, sebs, Ns, study_id (optional)}
 
-\item{method}{1 FAT-PET, 2 PEESE, 3 PET-PEESE, 4 EK}
+\item{method}{1=FAT-PET, 2=PEESE, 3=PET-PEESE, 4=EK}
 
-\item{AR}{Anderson Rubin corrected confidence interval for weak instruments (only for unweighted MAIVE versions of PET, PEESE and PET-PEESE, not available for fixed effects): 0 no, 1 yes
+\item{AR}{Anderson Rubin corrected confidence interval for weak instruments (only for unweighted MAIVE versions of PET, PEESE and PET-PEESE, not available for fixed effects): 0=no, 1=yes
 
 standard estimator: same option as for MAIVE but weighted by inverse variance and not instrumented}
 
