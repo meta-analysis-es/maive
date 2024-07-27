@@ -14,7 +14,7 @@ maive(
 )
 }
 \arguments{
-\item{dat}{data with columns bs, sebs, Ns, study_id (optional)}
+\item{dat}{dataframe with columns bs, sebs, Ns, study_id (optional)}
 
 \item{method}{1=FAT-PET, 2=PEESE, 3=PET-PEESE, 4=EK}
 
