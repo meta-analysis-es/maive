@@ -40,7 +40,7 @@ when instrumenting: heteroskedastic robust F-test of the first step
 R package for MAIVE: "Spurious Precision in Meta-Analysis of Observational Research" by Zuzana Irsova, Pedro Bom, Tomas Havranek, and Heiko Rachinger
 }
 \details{
-data dat can be imported from an excel file via: dat <- read_excel("inputdata.xlsx") and consists of: 
+dataframe dat consists of: 
 \itemize{
   \item estimates: bs
   \item standard errors: sebs
