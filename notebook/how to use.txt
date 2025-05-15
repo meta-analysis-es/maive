@@ -1,0 +1,36 @@
+# install from github
+library(devtools)
+install_github("HeikoJR/MAIVE")
+library(MAIVE)
+
+
+# OPTIONS: 
+# method: PET:1, PEESE:2, PET-PEESE:3, EK:4 (default 3)
+  method <- 3
+# weighting: default no weight: 0 ; weights: 1, adjusted weights: 2 (default 0)
+  weight <- 0
+# instrumenting (default 1)
+  instrument <- 1 
+# correlation at study level: none: 0 (default), fixed effects: 1, cluster: 2
+  studylevel <-2
+  # Anderson-Rubin confidence interval for weak instruments (only for unweighted MAIVE -- PET, PEESE or PET-PEESE): 0 no, 1 yes
+  AR <-1
+# default options are method=3; weight=0; instrument=1; studylevel=0; AR=0 
+
+if (!require('rstudioapi')) install.packages('rstudioapi'); library('rstudioapi')
+if (!require('readxl')) install.packages('readxl'); library('readxl')
+dat <- read_excel("inputdata.xlsx")
+    
+
+
+# This is the actual execution of the code:
+MAIVE=maive(dat=dat,method=method,weight=weight,instrument=instrument,studylevel=studylevel,AR=AR)
+
+
+cat("\f")
+
+object<-c("MAIVE coefficient","MAIVE standard error","F-test of first step in IV","Hausman-type test (to be used with caution)","Critical Value of Chi2(1)","AR Confidence interval")
+value<-c(MAIVE$beta,MAIVE$SE,MAIVE$`F-test`,MAIVE$Hausman,MAIVE$Chi2,paste(MAIVE$AR_CI, collapse = " "))
+MAIVEresults<-data.frame(object,value)
+cat("\f")
+MAIVEresults

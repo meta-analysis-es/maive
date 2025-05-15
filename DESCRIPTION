@@ -1,0 +1,45 @@
+Package: MAIVE
+Type: Package
+Title: Meta Analysis Instrumental Variable Estimator
+Encoding: UTF-8
+Version: 0.0.1.0
+RoxygenNote: 7.3.2
+Authors@R: 
+    c(
+        person(given = "Zuzana", family = "Irsova",
+               role = "aut",
+               comment = c(affiliation = "Charles University, Prague")),
+        person(given = "Pedro R. D.", family = "Bom",
+               role = "aut",
+               comment = c(affiliation = "University of Deusto, Bilbao")),
+        person(given = "Tomas", family = "Havranek",
+               role = "aut",
+               comment = c(affiliation = c("Charles University, Prague",
+                                           "Centre for Economic Policy Research, London",
+                                           "Meta-Research Innovation Center, Stanford"))),
+        person(given = "Heiko", family = "Rachinger",
+               email = "heiko.rachinger@uib.es",
+               role = c("aut", "cre"),
+               comment = c(affiliation = "University of the Balearic Islands, Palma"))
+    )
+Description: 
+    Meta-analysis traditionally assigns more weight to studies with lower standard errors, 
+    assuming higher precision. However, in observational research, precision must be 
+    estimated and is vulnerable to manipulation, such as p-hacking, to achieve statistical 
+    significance. This can lead to spurious precision, invalidating inverse-variance 
+    weighting and bias-correction methods like funnel plots. Common methods for addressing 
+    publication bias, including selection models, often fail or exacerbate the problem. 
+    This package introduces an instrumental variable approach to limit bias caused by 
+    spurious precision in meta-analysis.
+License: MIT + file LICENSE
+Depends: 
+    R (>= 4.0.0)
+Imports: 
+    stats,
+    utils
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+LazyData: true
