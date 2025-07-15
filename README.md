@@ -3,8 +3,8 @@ MAIVE in R: Instructions to the User
 July 2025
 
 This readme provides instructions on the implementation of the MAIVE
-meta-analysis estimator in R: The `meta_maive` package with the
-`maive.R` function.
+meta-analysis estimator in R: The `MAIVE` package with the
+`maive.r` function.
 
 Spurious Precision in Meta-Analysis of Observational Research by Zuzana
 Irsova, Pedro R. D. Bom, Tomas Havranek, and Heiko Rachinger  
