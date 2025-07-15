@@ -118,7 +118,6 @@ maive <- function(dat, method, weight, instrument, studylevel, SE, AR) {
   }
 
   # AR not available for EK, for fixed effects, and for weighted
-  # if (method==4|studylevel==1|weight==1|weight==2|instrument==0) {
   if (method==4|weight==1|weight==2|instrument==0) {     AR<-0
   }
 
