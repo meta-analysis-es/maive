@@ -4,48 +4,46 @@
 \alias{maive}
 \title{R code for MAIVE}
 \usage{
-maive(
-  dat = dat,
-  method = method,
-  weight = weight,
-  instrument = instrument,
-  studylevel = studylevel,
-  AR = AR
-)
+maive(dat, method, weight, instrument, studylevel, SE, AR)
 }
 \arguments{
-\item{dat}{data with columns bs, sebs, Ns, study_id (optional)}
+\item{dat}{Data frame with columns bs, sebs, Ns, study_id (optional).}
 
-\item{method}{1 FAT-PET, 2 PEESE, 3 PET-PEESE, 4 EK}
+\item{method}{1 FAT-PET, 2 PEESE, 3 PET-PEESE, 4 EK.}
 
-\item{AR}{Anderson Rubin corrected confidence interval for weak instruments (only for unweighted MAIVE versions of PET, PEESE and PET-PEESE, not available for fixed effects): 0 no, 1 yes
+\item{weight}{0 no weights, 1 standard weights, 2 adjusted weights.}
 
-standard estimator: same option as for MAIVE but weighted by inverse variance and not instrumented}
+\item{instrument}{1 yes, 0 no.}
 
-\item{weighting}{0 no weights, 1 standard weights, 2 adjusted weights}
+\item{studylevel}{Correlation at study level: 0 none, 1 fixed effects, 2 cluster.}
 
-\item{instrumenting}{1 yes, 0 no}
+\item{SE}{SE estimator: 0 CR0 (Huber–White), 1 CR1 (Standard empirical correction),
+2 CR2 (Bias-reduced estimator), 3 wild bootstrap.}
 
-\item{correlation}{correlation at study level: 0 none, 1 fixed effects, 2 cluster}
+\item{AR}{Anderson Rubin corrected CI for weak instruments (only for unweighted MAIVE versions
+of PET, PEESE, PET-PEESE, not available for fixed effects): 0 no, 1 yes.}
 }
 \value{
-MAIVE meta-estimate and standard error
-
-Hausman type test: comparison between MAIVE and standard version
-
-when instrumenting: heteroskedastic robust F-test of the first step
-      instrumented standard errors
+\itemize{
+  \item MAIVE meta-estimate and standard error
+  \item Hausman type test: comparison between MAIVE and standard version
+  \item When instrumenting: heteroskedastic robust F-test of the first step instrumented SEs
+  \item p-value of test for publication bias / p-hacking based on instrumented FAT
+}
 }
 \description{
-R package for MAIVE: "Spurious Precision in Meta-Analysis of Observational Research" by Zuzana Irsova, Pedro Bom, Tomas Havranek, and Heiko Rachinger
+R package for MAIVE: "Spurious Precision in Meta-Analysis of Observational Research" by
+Zuzana Irsova, Pedro Bom, Tomas Havranek, and Heiko Rachinger.
 }
 \details{
-data dat can be imported from an excel file via: dat <- read_excel("inputdata.xlsx") and consists of: 
+Data \code{dat} can be imported from an Excel file via:
+\code{dat <- read_excel("inputdata.xlsx")} or from a csv file via: \code{dat <- read.csv("inputdata.csv")}
+It should contain:
 \itemize{
-  \item estimates: bs
-  \item standard errors: sebs
-  \item number of observations: Ns
-  \item optional: study_id
+  \item Estimates: bs
+  \item Standard errors: sebs
+  \item Number of observations: Ns
+  \item Optional: study_id
 }
-default option for MAIVE: MAIVE-PET-PEESE, unweighted, instrumented
+Default option for MAIVE: MAIVE-PET-PEESE, unweighted, instrumented, cluster SE, wild bootstrap, AR.
 }
