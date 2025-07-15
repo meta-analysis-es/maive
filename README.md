@@ -50,15 +50,14 @@ parentheses):
 | method | Meta-analysis method | PET=1, PEESE=2, PET-PEESE=3 (default), EK=4 |
 | weighting | Weighting scheme | No weights=0 (default), Weights=1, Adjusted weights=2 |
 | instrumenting | Instrument standard errors | No=0, Yes=1 (default) |
-| studylevel | Study-level correlation | None=0, Fixed effects=1, Cluster=2 (default)|
-| SE | Standard errors | CR0 (Huber–White)=0, CR1 (Standard empirical correction)=1,
-#' CR2 (Bias-reduced estimator)=2, wild bootstrap=3 (default)|
+| studylevel | Study-level correlation | None=0, Fixed effects=1, Cluster=2 (default), Fixed effects and Cluster=3|
+| SE | Standard errors | CR0 (Huber–White)=0, CR1 (Standard empirical correction)=1, CR2 (Bias-reduced estimator)=2, wild bootstrap=3 (default)|
 | AR | Anderson-Rubin confidence interval (only for unweighted) | No=0 , Yes=1 (default)|
 
 ## Description of Default Settings
 
 The default MAIVE meta-estimator is MAIVE-PET-PEESE with instrumented
-standard errors and no weights. However, the user can adjust:
+standard errors, no weights, cluster and wild bootstrap. However, the user can adjust:
 
 - The meta-analysis method (PET, PEESE, PET-PEESE, EK).
 - The weighting (no weights, inverse-variance weights, or MAIVE-adjusted
@@ -66,6 +65,7 @@ standard errors and no weights. However, the user can adjust:
 - Instrumentation of standard errors (yes or no).
 - Accounting for study-level correlation (none, fixed effects, 
   cluster-robust methods, or fixed effects and cluster-robust methods).
+- Use CR0 (Huber–White), CR1 (Standard empirical correction)=1, or CR2 (Bias-reduced estimator) for the estimation of the standard errors
 
 ## Output
 
@@ -79,7 +79,7 @@ The function returns:
 - If AR option is chosen, an Anderson-Rubin confidence interval for weak
   instruments.
 - Instrumented standard errors saved as `MAIVE$SE_instrumented`.
-- 
+- p-value of test for publication bias / p-hacking based on instrumented FAT.
 
 ## Technical Comments
 
