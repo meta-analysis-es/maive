@@ -20,7 +20,7 @@ using **devtools**:
 ``` r
 install.packages("devtools")
 devtools::install_github("meta-analysis-es/maive")
-library(maive)
+library(MAIVE)
 ```
 
 For help on the `maive.r` function:
